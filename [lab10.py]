@@ -1,0 +1,120 @@
+# IPython log file
+
+get_ipython().magic(u'pinfo save')
+get_ipython().magic(u'logstart [lab10.py]')
+get_ipython().magic(u'ls')
+get_ipython().system(u'ls')
+vim lab10.py
+get_ipython().system(u'vim lab10.py')
+from BeautifulSoup import BeautifulSoup
+def scrapePage(retX,retY,inFile,yr,numPce,origPrc):
+    fr = open(inFile)
+    soup = BeautifulSoup(fr.read())
+    i = 1
+    currentRow = soup.findAll('table',r='%d'%i)
+    title = currentRow[0].findAll('a')[1].text
+    lwrTitle = title.lower()
+    if(lwTitle.find('new')>-1) or (lwrTitle.find('nisb')>-1):
+        newFlag = 1.0
+    else:
+        newFlag = 0.0
+        
+def scrapePage(retX,retY,inFile,yr,numPce,origPrc):
+    fr = open(inFile)
+    soup = BeautifulSoup(fr.read())
+    i = 1
+    currentRow = soup.findAll('table',r='%d'%i)
+    title = currentRow[0].findAll('a')[1].text
+    lwrTitle = title.lower()
+    if(lwTitle.find('new')>-1) or (lwrTitle.find('nisb')>-1):
+        newFlag = 1.0
+    else:
+        newFlag = 0.0
+    soldUnicde = currentRow[0].findAll('td')[3].findAll('span')
+    if len(soldUnicde)==0:
+        print('item #%d did not sell'%i)
+        else:
+            soldPrice = currentRow[0].findAll('td')[4]
+            priceStr = soldPrice.text
+            priceStr = priceStr.replace('$','')
+            priceStr = priceStr.replace(',','')
+            if len(soldPrice)>1:
+                priceStr = priceStr.replace('Free shipping','')
+            if sellingPrice >origPrc *0.5:
+                print('%d\t%d\t%d\t%f\t%f'%(yr,numPce,newFlag,origPrc,sellingPrice)
+                retX.append([yr,numPce,newFlag,origPrc])
+                retY.append(sellingPrice)
+            i += 1
+            currenRow = soup.findAll('table',r='%d'%i)
+                
+         )
+         
+def scrapePage(retX,retY,inFile,yr,numPce,origPrc):
+    fr = open(inFile)
+    soup = BeautifulSoup(fr.read())
+    i = 1
+    currentRow = soup.findAll('table',r='%d'%i)
+    title = currentRow[0].findAll('a')[1].text
+    lwrTitle = title.lower()
+    if(lwTitle.find('new')>-1) or (lwrTitle.find('nisb')>-1):
+        newFlag = 1.0
+    else:
+        newFlag = 0.0
+    soldUnicde = currentRow[0].findAll('td')[3].findAll('span')
+    if len(soldUnicde)==0:
+        print('item #%d did not sell'%i)
+        else:
+            soldPrice = currentRow[0].findAll('td')[4]
+            priceStr = soldPrice.text
+            priceStr = priceStr.replace('$','')
+            priceStr = priceStr.replace(',','')
+            if len(soldPrice)>1:
+                priceStr = priceStr.replace('Free shipping','')
+            if sellingPrice >origPrc *0.5:
+                print('%d\t%d\t%d\t%f\t%f'%(yr,numPce,newFlag,origPrc,sellingPrice)
+                retX.append([y
+                
+                
+                
+                
+                
+                
+                
+                )
+                
+                
+                )
+                
+                )\
+              )
+              
+def scrapePage(retX,retY,inFile,yr,numPce,origPrc):
+        fr = open(inFile)
+        soup = BeautifulSoup(fr.read())
+        i = 1
+        currentRow = soup.findAll('table',r='%d'%i)
+        title = currentRow[0].findAll('a')[1].text
+        lwrTitle = title.lower()
+        if(lwTitle.find('new')>-1) or (lwrTitle.find('nisb')>-1):
+            newFlag = 1.0
+        else:
+            newFlag = 0.0
+        soldUnicde = currentRow[0].findAll('td')[3].findAll('span')
+        if len(soldUnicde)==0:
+            print('item #%d did not sell'%i)
+        else:
+            soldPrice = currentRow[0].findAll('td')[4]
+            priceStr = soldPrice.text
+            priceStr = priceStr.replace('$','')
+            priceStr = priceStr.replace(',','')
+            if len(soldPrice)>1:
+                priceStr = priceStr.replace('Free shipping','')
+            if sellingPrice >origPrc *0.5:
+                print('%d\t%d\t%d\t%f\t%f'%(yr,numPce,newFlag,origPrc,sellingPrice)
+                retX.append([yr,numPce,newFlag,origPrc])
+                retY.append(sellingPrice)
+            i += 1
+            currenRow = soup.findAll('table',r='%d'%i)
+                
+         )
+                  
